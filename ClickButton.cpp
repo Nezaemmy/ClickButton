@@ -131,7 +131,7 @@ void ClickButton::Update()
 
 
   // debounce the button (Check if a stable, changed state has occured)
-  if (now - _lastBounceTime > debounceTime && _btnState != depressed)
+  if ((now - _lastBounceTime) > debounceTime && _btnState != depressed)
   {
     depressed = _btnState;
     if (depressed) _clickCount++;
@@ -150,7 +150,7 @@ void ClickButton::Update()
   }
 
   // Check for "long click"
-  if (depressed && (now - _lastBounceTime > longClickTime))
+  if (depressed && (now - _lastBounceTime) > longClickTime)
   {
     // negative count for long clicks
     clicks = 0 - _clickCount;

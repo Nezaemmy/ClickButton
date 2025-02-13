@@ -120,7 +120,7 @@ ClickButton::ClickButton(uint8_t buttonPin, boolean activeType, boolean internal
 
 void ClickButton::Update()
 {
-  long now = (long)millis();      // get current time
+  uint64_t now = millis();      // get current time
   _btnState = digitalRead(_pin);  // current appearant button state
 
   // Make the button logic active-high in code

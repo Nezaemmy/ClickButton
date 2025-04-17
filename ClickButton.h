@@ -17,7 +17,7 @@ class ClickButton
   public:
     ClickButton(uint8_t buttonPin);
     ClickButton(uint8_t buttonPin, boolean active);
-    ClickButton(uint8_t buttonPin, boolean active, boolean internalPullup);
+    ClickButton(uint8_t buttonPin, boolean active, boolean internalPull);
     void Update();
     int clicks;                   // button click counts to return
     boolean depressed;            // the currently debounced button (press) state (presumably it is not sad :)

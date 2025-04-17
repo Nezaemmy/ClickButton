@@ -9,7 +9,6 @@
 
 
 #define CLICKBTN_PULLUP HIGH
-#define CLICKBTN_PULLDOWN LOW
 
 
 class ClickButton

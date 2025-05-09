@@ -108,9 +108,11 @@ ClickButton::ClickButton(uint8_t buttonPin, boolean activeType, boolean internal
   changed        = false;
   //pinMode(_pin, INPUT);
   // Turn on internal pullup resistor if applicable
-  //if (_activeHigh == LOW && internalPullup == CLICKBTN_PULLUP) digitalWrite(_pin,HIGH);
+  //if (_activeHigh == LOW && internalPull == CLICKBTN_PULLUP) digitalWrite(_pin,HIGH);
   if (_activeHigh == LOW && internalPull == CLICKBTN_PULLUP) 
     pinMode(_pin, INPUT_PULLUP);
+   // Turn on internal pulldown resistor if applicable
+  //if (_activeHigh == HIGH && internalPull == CLICKBTN_PULLUP) digitalWrite(_pin,HIGH);
   else
   if (_activeHigh == HIGH && internalPull == CLICKBTN_PULLDOWN) 
     pinMode(_pin, INPUT_PULLDOWN);
